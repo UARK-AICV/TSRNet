@@ -57,15 +57,16 @@ def detection_test(args, model, test_loader, labels):
     result = []
     for i, (time_ecg, spectrogram_ecg, r_index) in tqdm(enumerate(test_loader)):
         instance_result = []
-        # loss mask based on R peaks
         time_length = time_ecg.shape[1]
-        idx_length = r_index.shape[1]
-        mask_loss = torch.zeros((time_length, args.dims), dtype=torch.bool).to(device)
-        for r_idx in range(idx_length):
-            r_index_value = r_index[0][r_idx]
-            if r_index_value>200 and r_index_value<4800-400:
-                left = max(0, r_index_value - 240)
-                mask_loss[left:r_index_value+240,:] = 1
+        if args.mask_loss:
+            # loss mask based on R peaks
+            idx_length = r_index.shape[1]
+            mask_loss = torch.zeros((time_length, args.dims), dtype=torch.bool).to(device)
+            for r_idx in range(idx_length):
+                r_index_value = r_index[0][r_idx]
+                if r_index_value>200 and r_index_value<4800-400:
+                    left = max(0, r_index_value - 240)
+                    mask_loss[left:r_index_value+240,:] = 1
  
         for j in range(100//args.mask_ratio_time):
             # mask on time branch
