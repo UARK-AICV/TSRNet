@@ -138,8 +138,8 @@ if __name__ == '__main__':
     parser.add_argument('--mask_ratio_spec', type=int, default=20, help='mask ratio for self-restoration in spectrogram branch')
     parser.add_argument('--seed', type=int, default=668, help='manual seed')
     parser.add_argument("--gpu", type=str, default="1")
-    parser.add_argument("--spec", default=True)
-    parser.add_argument("--mask_loss", default=True)  #Peak-based Error
+    parser.add_argument("--spec", default=False)
+    parser.add_argument("--mask_loss", default=False)  #Peak-based Error
 
     args = parser.parse_args()
     
