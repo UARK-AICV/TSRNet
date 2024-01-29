@@ -139,7 +139,7 @@ if __name__ == '__main__':
     parser.add_argument('--seed', type=int, default=668, help='manual seed')
     parser.add_argument("--gpu", type=str, default="1")
     parser.add_argument("--spec", default=True)
-    parser.add_argument("--mask_loss", default=True)
+    parser.add_argument("--mask_loss", default=True)  #Peak-based Error
 
     args = parser.parse_args()
     
