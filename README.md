@@ -89,7 +89,7 @@ python test.py --dims "dimension of ECG signal" --data_path "path to train datas
 ```
 
 ## Acknowledgment
-A part of this code is adapted from these previous work: [Jiang et al.](https://github.com/MediaBrain-SJTU/ECGAD)
+A part of this code is adapted from these previous works: [Jiang et al.](https://github.com/MediaBrain-SJTU/ECGAD) and [Phan et al.](https://github.com/UARK-AICV/ECG_SSL_12Lead)
 
 ## FAQ
 If you have any questions, please feel free to create an issue on this repository or contact us at <tanb@uark.edu> / <hieu.hoang2020@ict.jvn.edu.vn>.
