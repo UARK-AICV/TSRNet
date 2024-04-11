@@ -1,4 +1,4 @@
-<h1 align="center">TSRNet: Simple Framework for Real-time ECG Anomaly Detection with Multimodal Time and Spectrogram Restoration Network </h1>
+<h1 align="center">TSRNet: Simple Framework for Real-time ECG Anomaly Detection with Multimodal Time and Spectrogram Restoration Network (ISBI 2024)</h1>
 <p align="center">
   <p align="center">
     <a href="https://tanbuinhat.github.io/"><strong>Nhat-Tan Bui</strong></a>
